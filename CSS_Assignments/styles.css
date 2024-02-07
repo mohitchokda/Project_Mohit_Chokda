@@ -1,0 +1,42 @@
+body{
+    background-color: rgb(55, 52, 52);
+    margin: 0%;
+}
+
+nav{
+    margin:0px;
+    background-color: black;
+    width: auto;
+    height: 50Px;
+    display: flexbox;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.left{
+    display: flex;
+    align-items: center;
+}
+
+.logo{
+    color: red;
+    margin-left: 10px;
+    font-family: 'Times New Roman', Times, serif;
+    max-height: 40px;
+}
+ul.menu{
+    list-style: none;
+    display: flex;
+}
+a.item{
+    color: antiquewhite;
+    margin-left: 15px;
+    font-size: small;
+    text-decoration: none;
+}
+
+a.item:hover{
+    background-color: #555;
+    color: aliceblue;
+}
+
