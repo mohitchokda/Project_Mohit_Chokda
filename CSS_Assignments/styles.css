@@ -3,36 +3,52 @@ body{
     margin: 0%;
 }
 
+/* Top Nav */
 nav{
     margin:0px;
     background-color: black;
-    width: auto;
-    height: 50Px;
-    display: flexbox;
+    width: fit-content;
+    height: 66px;
+    display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
+/* Left Nav Panel */
+
 .left{
     display: flex;
     align-items: center;
+    margin-top: 10px;
+    margin-left: 54px;
 }
 
+/* LOGO */
 .logo{
     color: red;
     margin-left: 10px;
     font-family: 'Times New Roman', Times, serif;
     max-height: 40px;
+    font-size: 27px;
+    font-weight: 500;
 }
+
+/* Menu Item List */
 ul.menu{
     list-style: none;
     display: flex;
+    width: 547px;
+    height: 26px;
+    margin-top: 20px;
+    margin-left: 200px;
 }
 a.item{
     color: antiquewhite;
     margin-left: 15px;
     font-size: small;
     text-decoration: none;
+    text-overflow: ellipsis;
+    padding: 0px;
 }
 
 a.item:hover{
@@ -40,3 +56,59 @@ a.item:hover{
     color: aliceblue;
 }
 
+/*Right Side Nav Panel*/
+.right{
+    display: flex;
+    align-items: center;
+}
+
+/* Search Button and Text field */
+.searchBar{
+    border : 1px solid #FFFFFF;
+    background-color: #171717;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    padding: 5px;
+    margin: 14px;
+}
+.searchIcon{
+    color: #FFFFFF;
+    width: 15px;
+    height: 15px;
+    background-color: #171717;
+}
+.searchText{
+    margin-left: 10px;
+    color: #999999;
+    font-size: small;
+    background-color: #171717;
+    border: none;
+    outline: none;
+    color: #FFFFFF;
+}
+
+/* Current User */
+.currUser{
+    color: #FFFFFF;
+    text-decoration: none;
+    padding: 8px;
+    margin: 10px;
+}
+
+/*Notification Bell*/
+.notificationBell{
+    
+    display: flex;
+    text-decoration: none;
+}
+
+.nBubble{
+    height: 15px;
+    width: 15px;
+    background-color: red;
+    border-radius: 50%;
+    margin-left: -15px;
+    text-align: center;
+    justify-content: center;
+}
