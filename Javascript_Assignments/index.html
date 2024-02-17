@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Video Card with Like Image</title>
+  
+    <!--CSS STYLES-->
+  <style>
+     /* CSS styles here */
+    .video-card {
+      width: 300px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      overflow: hidden;
+      margin-bottom: 20px;
+    }
+
+    .video-container {
+      position: relative;
+    }
+
+    .video-container iframe {
+      width: 100%;
+      height: auto;
+    }
+
+    .content {
+      padding: 10px;
+      position: relative;
+    }
+
+    h2 {
+      margin-top: 0;
+    }
+
+    .like-image {
+      width: 30px;
+      height: auto;
+      cursor: pointer;
+      display: block;
+      margin: 0 auto;
+    }
+
+    .like-dialog {
+      display: none;
+      position: absolute;
+      top: 15px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: rgba(0, 0, 0, 0.8);
+      color: white;
+      padding: 6px 10px;
+      border-radius: 4px;
+      pointer-events: none;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="video-card">
+    <div class="video-container">
+      <!-- Embed your video here -->
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/jCD1JkDp_BQ?si=TW12TuNk8eVRK_9n" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <div class="content">
+      <h2>Bosscoder Academy</h2>
+      <div class="like-dialog">I like this</div>
+      <!-- thumbs-up image -->
+      <img class="like-image" src="/Javascript_Assignments/images/like.png" alt="Thumbs Up">
+    </div>
+  </div>
+
+  <!-- JS CODE -->
+  <script>
+    // JavaScript code here
+    const likeImages = document.querySelectorAll('.like-image');
+    
+    let isLiked = false;
+
+    likeImages.forEach((likeImage) => {
+      const likeDialog = likeImage.previousElementSibling;
+
+
+      likeImage.addEventListener('mouseover', () => {
+        likeDialog.style.display = 'block';
+      });
+
+
+      likeImage.addEventListener('mouseout', () => {
+        likeDialog.style.display = 'none';
+      });
+
+
+      //Handle Image Click
+      likeImage.addEventListener('click',() => {
+        //console.log("Image Clicked");
+        if(isLiked){
+            likeImage.setAttribute("src","/Javascript_Assignments/images/like.png");
+            isLiked = false; 
+        }else{
+            likeImage.setAttribute("src","/Javascript_Assignments/images/likeFilled.png");
+            isLiked = true; 
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
